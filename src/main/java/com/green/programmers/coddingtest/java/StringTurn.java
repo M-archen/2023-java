@@ -34,9 +34,14 @@ public class StringTurn {
         String a = sc.next();
         int tmp=a.length();
 
-        for(int i=0;i<=tmp;i++)
+        for(int i=0;i<tmp;i++)
         {
-            System.out.println(a.charAt(i));
+
+            if(i==tmp){
+                System.out.printf("%c",a.charAt(i));
+                break;
+            }
+            System.out.printf("%c\n",a.charAt(i));
         }
 
     }
