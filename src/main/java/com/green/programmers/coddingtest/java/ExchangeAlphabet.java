@@ -1,4 +1,4 @@
-package com.green.codingtest.java;
+package com.green.programmers.coddingtest.java;
 
 import java.util.Scanner;
 // 입력:ABCDEFghijklmnop

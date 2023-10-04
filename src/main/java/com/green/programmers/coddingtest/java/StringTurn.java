@@ -1,4 +1,4 @@
-package com.green.codingtest.java;
+package com.green.programmers.coddingtest.java;
 /*
 문자열 돌리기
 문제 설명
@@ -36,8 +36,7 @@ public class StringTurn {
 
         for(int i=0;i<=tmp;i++)
         {
-            int b=a.charAt(i);
-            System.out.printf("%c\n",b);
+            System.out.println(a.charAt(i));
         }
 
     }
