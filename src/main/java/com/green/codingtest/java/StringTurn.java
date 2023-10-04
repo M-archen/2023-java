@@ -33,10 +33,13 @@ public class StringTurn {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         int tmp=a.length();
+
         for(int i=0;i<=tmp;i++)
         {
-
+            int b=a.charAt(i);
+            System.out.printf("%c\n",b);
         }
+
     }
 
 }

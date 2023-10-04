@@ -15,6 +15,7 @@ public class RandomValMission {
             if(Val<MIN||Val>MAX)
             {
                 System.out.println("범위를 벗어났습니다.");
+                //응애
 
             }
 
