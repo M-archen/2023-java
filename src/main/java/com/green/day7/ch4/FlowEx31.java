@@ -6,7 +6,8 @@ public class FlowEx31 {
         //3의 배수는 (0포함 출력이 안되도록 해주세요
 
         for(int i=0;i<=10;i++)
-        {   if(i%3==0)continue;
+        {
+            if(i%3==0)continue;
             System.out.printf("%d\n",i);
         }
     }

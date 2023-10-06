@@ -22,8 +22,6 @@ public class FlowEx32 {
         메뉴를 잘못 선택하셨습니다.
 
          */
-
-
         Scanner scan=new Scanner(System.in);
 
         int a=0;
@@ -38,9 +36,6 @@ public class FlowEx32 {
             {
                 System.out.printf("당신이 고른 메뉴는 %d번입니다.\n",a);
             }else System.out.printf("메뉴를 잘못 선택하셨습니다. 다시선택해주십시오.\n");
-
-
-
 
         }
         System.out.printf("종료.");
