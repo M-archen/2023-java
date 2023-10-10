@@ -40,6 +40,9 @@ public class Phonekemon {
     class Solution {
         public int solution(int[] nums) {
             int answer = 0;
+            for (int i = 0; i < nums.length; i++) {
+
+            }
 
 
             return answer;

@@ -29,26 +29,20 @@ public class ConditionString {
     class Solution {
         public int solution(String ineq, String eq, int n, int m) {//처음에 맞다고 생각했는데 자꾸 틀렸다고 생각하여 찾아보니
             int answer = 0;                                         //문자열을 비교할때는 equals()를 사용해야 한다고 한다. 문자열 비교시에는
-            if(eq.equals("!"))                                             //equals() 를 사용하도록 하자.
+            if(ineq.equals("<"))                                    //equals() 를 사용하도록 하자.
             {
-                if(ineq.equals("!")&&n>m)
-                {
+                if(eq.equals("=")&&n<=m){
                     answer=1;
-                }else if(ineq.equals("<")&&n<m)
-                {
+                }else if(eq.equals("!")&&n<m){
                     answer=1;
                 }else answer=0;
-            }else
-            {
-                if(ineq.equals(">")&&n>=m)
-                {
+            }else if(ineq.equals(">")){
+                if(eq.equals("=")&&n>=m){
                     answer=1;
-                }else if(ineq.equals("<")&&n<=m)
-                {
+                }else if(eq.equals("!")&&n>m){
                     answer=1;
                 }else answer=0;
             }
-
             return answer;
         }
     }
