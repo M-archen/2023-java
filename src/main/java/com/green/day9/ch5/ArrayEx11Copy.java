@@ -14,12 +14,18 @@ public class ArrayEx11Copy {
         cntarr의 0번 방은 0의 개수, 1번 방은 1의 개수count값을 넣는다.
         0~9의 개수를 출력.
          */
-        for (int i = 0; i < numArr.length; i++) {
+        int i=0;
+        for (int n:numArr) {
             int Ran = (int)(Math.random() * 10);
             numArr[i] = Ran;
             cntArr[Ran]++;
             System.out.printf("numArr[%d]:%d , ",i,numArr[i]);
+            i++;
         }
         System.out.println(Arrays.toString(cntArr));
+
+
+
+
     }
 }
