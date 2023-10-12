@@ -1,7 +1,7 @@
 package com.green.day10.ch6;
 
 public class MethodExam {
-    void checkZero(int i){//method는 보통 void 메소드와 return method로 나뉜다.
+    void checkZero(int i){
 
         if(i==0){
             System.out.println("0입니다.");

@@ -11,5 +11,5 @@ public class NumberBox {//객채는 속성과 메소드로 구성됨. 현재는 
     }
     void abs(int n3){
         System.out.printf("%d\n",n3<0?-n3:n3);
-    }//메소드를 정의했다.
+    }
 }

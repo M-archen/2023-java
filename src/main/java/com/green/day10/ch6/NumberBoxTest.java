@@ -9,7 +9,7 @@ public class NumberBoxTest {
         nb1.sum(10,20);
         nb1.sum(30,40);//보내는 값을 argument라고 부름(인자,인수)
 
-        nb1.minus(40,20);//메소드를 호출했다.
+        nb1.minus(40,20);//
         nb1.abs(-1);
     }
 }

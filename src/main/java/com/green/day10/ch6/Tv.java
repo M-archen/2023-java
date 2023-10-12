@@ -5,7 +5,7 @@ public class Tv {//     클래스              객체(Object)=Instance
                  //     문서
                  //     설계도             아파트,Tv
                  //     설명                  제품
-    //---멤버필드,속성,property,전역변수---
+    //-------멤버필드,속성,property-----
     String color;
     boolean power;
     int channel;
