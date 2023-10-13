@@ -1,4 +1,7 @@
 package com.green.programmers.coddingtest.java;
+
+import java.util.Arrays;
+
 /*
 뒤에서 5등까지
 문제 설명
@@ -17,10 +20,23 @@ num_list	result
  */
 public class BackFifth {
     class Solution {
-        public int[] solution(int[] num_list) {
-            int[] answer = new int[num_list.length];
+        public int[] solution(int[] art) {
 
-            return answer;
+            for (int i = art.length-1; i >0 ; i--) {
+                for (int j = 0; j < i; j++) {
+                    int nIdx=j+1;
+                    if(art[j]>art[nIdx]){
+                        int tmp=art[j];
+                        art[j]=art[nIdx];
+                        art[nIdx]=tmp;
+                    }
+
+                }
+            }
+
+
+
+            return art;
         }
     }
 }

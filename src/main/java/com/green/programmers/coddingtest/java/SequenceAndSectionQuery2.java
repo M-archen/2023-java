@@ -1,4 +1,5 @@
 package com.green.programmers.coddingtest.java;
+import java.util.*;
 /*
 수열과 구간 쿼리 2
 문제 설명
@@ -30,27 +31,26 @@ public class SequenceAndSectionQuery2 {
     class Solution {
         public int[] solution(int[] arr, int[][] queries) {//문제파악. queries[][길이:3]
             int[] answer = new int[queries.length];
+            Arrays.fill(answer,Integer.MAX_VALUE);
             int s=0;
             int k=0;
             int e=0;
-            int Min=1000000;
+
             for (int i = 0; i < queries.length; i++) {
+                int Min=Integer.MAX_VALUE;
                 s=queries[i][0];
                 e=queries[i][1];
                 k=queries[i][2];
-                for (int j = s; j < e; j++) {
-                    if(Min>arr[j]){
+                for (int j = s; j <= e; j++) {
+                    if(Min>arr[j]&&arr[j]>k){
                         Min=arr[j];
                     }
                 }
-                if(Min>k){
-                    answer[i]=Min;
-                }else answer[i]=-1;
 
+                answer[i]=Min==Integer.MAX_VALUE?-1:Min;
             }
-
             return answer;
-
         }
+
     }
 }

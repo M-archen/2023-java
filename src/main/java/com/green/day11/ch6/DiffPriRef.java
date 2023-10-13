@@ -21,7 +21,7 @@ public class DiffPriRef {//Promotive타입과 Reference타입의 차이점.
     public static void changeVal(int val){
         System.out.println("changeVal - int");
         val=10;
-    }                                               //
+    }                                               //이름이 똑같은 메소드를 생성할 수 있다. (오버로딩)
     public static void changeVal(NumBox nb2){//nb2는 NumBox 의 매개변수.
 
         nb2=new NumBox();//nb2라고 이름만 똑같은데 주소값이 다른애 생성.

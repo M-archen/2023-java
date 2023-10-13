@@ -9,7 +9,7 @@ package com.green.programmers.coddingtest.java;
 1 ≤ num_list의 원소 ≤ 9
 num_list에는 적어도 한 개씩의 짝수와 홀수가 있습니다.
 입출력 예
-num_list	    result
+num_list	result
 [3, 4, 5, 2, 1]	393
 [5, 7, 8, 3]	581
 입출력 예 설명
@@ -24,18 +24,11 @@ public class GlueNumber {
     class Solution {
         public int solution(int[] num_list) {
             int answer = 0;
-            int count=0;
-            for (int i = 0; i < num_list.length; i++) {
-                if(num_list[i]%2!=0){
-                    count++;
-                }
+            int len= num_list.length;;
+            for (int i = 1; i < len+1; i++) {
+                if(num_list[i]%2==0);
             }
-            for (int i = 0; i < count; i++) {
-
-            }
-
             return answer;
         }
     }
-
 }
