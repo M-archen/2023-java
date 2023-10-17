@@ -5,7 +5,7 @@ import com.green.day4.ch4.Switch;
 
 public class CardTest2 {
     public static void main(String[] args) {
-        Card[] cards=makeCards();//메소드 호출.
+        Card[] cards=makeCards();//메소드 호출. 리턴타입(카드[]타입) 파라미터X()없음
         System.out.println(cards.length);
 
         for(Card c:cards){//Card c는 Card 객체에만 접근 가능. 즉 카드 클래스 안에만 접근가능.

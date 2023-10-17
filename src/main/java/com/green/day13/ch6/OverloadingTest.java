@@ -1,6 +1,6 @@
 package com.green.day13.ch6;
 
-public class OverloadingTest {
+public class OverloadingTest {// 같은 클래스 안에서 똑같은 이름의 메소드를 여러개 만들 수 있다= 오버로딩.
     public static void main(String[] args) {
         System.out.println(10.2D);
     }

@@ -53,11 +53,11 @@ public class CardTest3 {
        /* for (int i = 0; i < cArr.length; i++) {
             String pattern=kinds[(i)/13];
             String denomination=numberReturn((i)%13);
-          //  cArr[i]=new Card();
+          //  cArr[i]=new Card(); //카드의 주소값이 담겼다. i마다 주소값이 달라짐.
           //  cArr[i].pattern=pattern;
-          //  cArr[i].denomination=denomination;
-           Card c=new Card();
-           c.pattern=pattern;
+          //  cArr[i].denomination=denomination;   카드배열의 각방의 타입은 카드타입
+           Card c=new Card();                           ||
+           c.pattern=pattern;            카드배열의 각방의 타입은 카드타입.
            c.denomination=denomination;
            cArr[i]=c; //위의 주석과 같다.
         }
