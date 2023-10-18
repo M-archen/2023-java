@@ -1,10 +1,10 @@
 package com.green.day14.ch6;
 
 public class CardDeck {//카드를 담는 통 .통은 1개,카드는 많이 들어감. 카드 1장당 객체.
-    Card[] cards;
+    Card[] cards;//cards는 전역변수. cards는 Card[]의 주소를 담을 수 있으며 Card[]에 접근,활용가능함.
 
     public CardDeck() {//기본 생성자를 만들음.
-        cards = new Card[52];
+        cards = new Card[52];//전역변수인cards는  Card[52]의 주소를 담을 수 있음.
         String[] patterns = {"Spade", "Heart", "Diamond", "Club"};
         int tmp = 0;
         for (int i = 0; i < patterns.length; i++) {
@@ -14,7 +14,7 @@ public class CardDeck {//카드를 담는 통 .통은 1개,카드는 많이 들�
                 String denomination = numberReturn(z);//this. 은 주소값. 과 같다. 스태틱이면 불가능.
                 cards[tmp++]= new Card(pattern, denomination);// Card(str,str)이므로 Card(str str)<<오버로딩>> 을 만들어줘야함.
 
-            }
+            }                   //Card(str str) 생성자 호출 << 스트링값 2개받는 생성자 호출.
         }
     }
 

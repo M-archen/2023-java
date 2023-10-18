@@ -30,7 +30,7 @@ class Car2Test{
         c1.gearType="manual";
         c1.door=5;
 
-        Car2 c2=new Car2(c1);
+        Car2 c2=new Car2(c1);// Car2 생성자한테 c1 즉 Car2의 주소값을 보낼 수 있다. c1과 c2는 다른 존재긴 하나. c1이 갖고있는값을 복사하여 c2로 복사.
 
         c1.printMyself();//color=black, geartype=manual, door=5
         c2.printMyself();//color=black, geartype=manual, door=5
