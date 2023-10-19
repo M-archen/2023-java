@@ -28,5 +28,6 @@ public class CaptionTvTest2 {
         ctv.channerlup();
         System.out.printf("ctv.channel : %d\n",ctv.channel);
         ctv.printParentChannel(35_5_5_555_5);
+        ctv.displayCaption("응");
     }
 }

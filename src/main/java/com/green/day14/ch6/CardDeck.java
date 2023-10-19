@@ -9,8 +9,8 @@ public class CardDeck {//카드를 담는 통 .통은 1개,카드는 많이 들�
         int tmp = 0;
         for (int i = 0; i < patterns.length; i++) {
             //반복문 돌면서 카드생성.
-            String pattern = patterns[i];
-            for (int z = 1; z <= 13; z++) {
+            String pattern = patterns[i];                   //this.asdfsadf >> asdfsadf=(메소드,속성 가능)
+            for (int z = 1; z <= 13; z++) {                 //this()생성자 호출.
                 String denomination = numberReturn(z);//this. 은 주소값. 과 같다. 스태틱이면 불가능.
                 cards[tmp++]= new Card(pattern, denomination);// Card(str,str)이므로 Card(str str)<<오버로딩>> 을 만들어줘야함.
 

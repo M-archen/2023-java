@@ -74,6 +74,4 @@ public class CardTest3 {
         }
         return Integer.toString(number);
     }
-
-
 }
