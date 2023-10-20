@@ -40,6 +40,7 @@ public class MakeArray4 {
     class Solution {
         public int[] solution(int[] arr) {
             int[] stk = {};
+            int answer=0;
 
             return stk;
         }

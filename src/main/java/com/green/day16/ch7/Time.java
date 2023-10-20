@@ -14,7 +14,7 @@ public class Time {
         this.second=second;
     }
     //      2.setter 메소드 이용. . .
-    public void setHour(final int hour){
+    public void setHour(final int hour){// setter는 전부다  void임 들어오는건 있지만 멤버필드의 값만 변경하면 됨.
         if(hour<MIN_HOUR){this.hour=MIN_HOUR; return;}
         if(hour>MAX_HOUR){this.hour=MAX_HOUR; return;}
         this.hour=hour;
@@ -26,9 +26,12 @@ public class Time {
         this.second=second;
     }
 
+
+    //      --getter--메소드 이용 . . .
+
     public int getHour() {
         return hour;
-    }
+    }// 파라미터가 없다. 이름에 정보가 이미 있음. 리턴타입은 변수의 타입.
 
     public int getMinute() {
         return minute;

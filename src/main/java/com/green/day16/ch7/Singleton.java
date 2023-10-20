@@ -1,9 +1,7 @@
 package com.green.day16.ch7;
 
-public class Singleton {
-    private Singleton(){
-
-    }
+public class Singleton {// Singleton << 객체생성을 한개이상 만들지 않겠다는 의지.
+    private Singleton(){}
     private static Singleton singleton; //Singleton getInstance()에서 쓸려면 객체화가 필요함. >> static을 붙임.
     public static Singleton getInstance(){
         if(singleton==null){
@@ -16,7 +14,7 @@ public class Singleton {
 class SingletonTest{
     public static void main(String[] args) {
        // Singleton s1=new Singleton();  <-- private이 붙어서 접근 불가능. 내부에서만 접근가능하다.
-        Singleton s1=Singleton.getInstance();
+        Singleton s1=Singleton.getInstance();   // <<static method. 대문자로 시작.
         Singleton s2=Singleton.getInstance();
         System.out.println(s1);
         System.out.println(s2);
