@@ -1,6 +1,7 @@
 package com.green.day17.ch7;
 
-public class PolyArgumentTestVer2 {
+public class PolyArgumentTestVer2 {   //다양성. 1.상속 관계에서 나타난다. 2. 타입을 알고있는 메소드만 호출할 수 있다.
+                                        // 3. 부모타입은 자식 객체 주소값을 담을 수 있다. 4. 자식타입은 부모 객체 주소값을 담을 수 없다.
     public static void main(String[] args) {
         Product2 p=new Product2("제품명",1000);
         System.out.println(p);
@@ -88,7 +89,7 @@ class Product2{
     private String name;
     private int price;
     private int bonusPoint;
-    protected Product2(String name,int price){
+    protected Product2(String name,int price){//기본생성자를 따로 만들지 않았으므로 Product2(String name,int price)가 기본생성자가 된다.
         this.name=name;
         this.price=price;
         this.bonusPoint=price/10;

@@ -49,7 +49,7 @@ class AnimalTest{
         // Bulldog bd=new Dog(); <<-불가능.
 
         //3.타입은 알고 있는 메소드만 호출 할 수 있고
-        // 호출이 된다면
+        // 호출이 된다면 객체 기준이다.
         Bulldog bulld=new Bulldog();
         bulld.crying();
         bulld.jump();
