@@ -36,7 +36,7 @@ public class ArrayListTest {
 class ArrayListTest2{
     public static void main(String[] args) {
         int v1=10;
-        Integer v2=10;
+        Integer v2=10;//Integer << primitive type 의 객체형이기때문에 메소드를 가지고 있음.
         System.out.println(v1==v2);
         List<Integer> list=new ArrayList();// Integer << 제네렉 이라고 함. <각 방의 타입(Primitive type(X)> 즉 <Wrapper Type> 만 가능함.
         list.add(10);// 처음에 정수가 들어갔으므로 나올때도 정수가 나와야함.  다른타입은 들어갈 수 없음.

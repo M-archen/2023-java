@@ -32,17 +32,33 @@ i	arr[i]	stk
 -	-	[1, 2, 3]
 따라서 [1, 2, 3]을 return 합니다.
  */
+import java.util.*;
 public class MakeArray4 {
     //변수 i=초기값 0. i<arr.length 진행시켜!
     //1.if(stk[]=NULL){stk[]=arr[i];i++}
     //2.if(stk[]=뭐가있다&&stk[마지막]<arr[i]){stk[마지막]}
     //3.if(stk[]=뭐가있다&&stk[마지막]>=arr[i]){stk[마지막] << 제거함.}
+
     class Solution {
         public int[] solution(int[] arr) {
-            int[] stk = {};
-            int answer=0;
-
-            return stk;
+            List<Integer> stk=new ArrayList<>();
+            int i=0;
+            while(i<arr.length){
+                if(stk.size()==0){
+                    stk.add(arr[i]);
+                    i++;
+                }else if(stk.size()>0&&stk.get(stk.size()-1)<arr[i]){
+                    stk.add(arr[i]);
+                    i++;
+                }else if(stk.size()>0&&stk.get(stk.size()-1)>=arr[i]){
+                    stk.remove(stk.size()-1);
+                }
+            }
+            int[] result= new int[stk.size()];
+            for (int j = 0; j < stk.size(); j++) {
+                result[j]= stk.get(j);
+            }
+            return result;
         }
     }
 

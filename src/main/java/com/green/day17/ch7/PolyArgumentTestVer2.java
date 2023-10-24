@@ -1,5 +1,8 @@
 package com.green.day17.ch7;
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class PolyArgumentTestVer2 {   //다양성. 1.상속 관계에서 나타난다. 2. 타입을 알고있는 메소드만 호출할 수 있다.
                                         // 3. 부모타입은 자식 객체 주소값을 담을 수 있다. 4. 자식타입은 부모 객체 주소값을 담을 수 없다.
     public static void main(String[] args) {
@@ -33,6 +36,16 @@ class PolyArgumentTestVer2_3{
 
     }
 }
+class PolyArgumentTestVer2_4{
+    public static void main(String[] args) {
+        Buyer2 buyer=new Buyer2();
+        buyer.buy(new Computer2());
+        buyer.buy(new Computer2());
+        buyer.buy(new Computer2());
+        buyer.buy(new Computer2());
+        buyer.summary();
+    }
+}
 
 class Buyer2{
     //money(정수) 저장가능
@@ -41,12 +54,13 @@ class Buyer2{
     private int money;
     private int bonusPoint;
     private Product2[] productArr;
+    int i=0;
     protected Buyer2(){
         this.money=1000;
         this.bonusPoint=0;
         productArr=new Product2[10];//생성자를 통해서 초기화.
     }
-    int i=0;
+
     int sum=0;
     void buy(Product2 product2){
         if(money< product2.getPrice()){
@@ -63,6 +77,16 @@ class Buyer2{
         sum+=product2.getPrice();
 
         System.out.println(product2.getName()+"을/를 구입하셨습니다.");
+        /*HashMap<Object, Object> buyItems;
+        Set<String> nameSet=buyItems.keySet();
+        Iterator<string> iterator-nameSet.iterator();
+        while(iterator.hasNext()){
+            String key=iterator.next();
+            int cnt=buyItems.get(key);
+            System.out.printf("%s %d대",);
+        }
+
+         */
     }
     void summary(){
         System.out.printf("%d원 ",sum);
