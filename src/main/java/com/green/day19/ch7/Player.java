@@ -16,12 +16,13 @@ public abstract class Player {//클래스는 자식 메소드중에 추상 메�
                                 //abstract method의 특징. 강제성이 있다.
                                 //주로 설계자분들이 많이 사용한다.
                                 //객체마다 내용이 완전 다를때 추상 메소드로 만든다.
+                                //Player는 부모타입으로써 자식객체인 AudioPlayer와 VideoPlayer의 주소값을 담을 수 있다.
     public abstract void play(int pos);  //추상메소드. 구현부가 없다.선언부만 있다. play method 있을 수도??
 }
 
-class AudioPlayer extends Player{ //추상 메소드는 강제성이 있다. 오버라이딩 하라는 강제성이 있다.
+class AudioPlayer extends Player{ //추상 메소드는 자식한테 오버라이딩 하려는 강제성이 있다.
 
-    @Override
+    @Override // << Anotation 이라고 부른다.
     public void play(int pos) {
         System.out.println("Audio Play 위치 : "+ pos);
     }
