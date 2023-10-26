@@ -21,8 +21,7 @@ num_list	result
 public class BackFifth {
     class Solution {
         public int[] solution(int[] art) {
-
-            for (int i = art.length-1; i >0 ; i--) {
+            for (int i = art.length-1; i >0 ; i--){
                 for (int j = 0; j < i; j++) {
                     int nIdx=j+1;
                     if(art[j]>art[nIdx]){
@@ -30,13 +29,13 @@ public class BackFifth {
                         art[j]=art[nIdx];
                         art[nIdx]=tmp;
                     }
-
                 }
             }
-
-
-
-            return art;
+        int[] arr=new int[5];
+            for (int i = 0; i < arr.length; i++) {
+                arr[i]=art[i];
+            }
+            return arr;
         }
     }
 }

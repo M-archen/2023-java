@@ -23,10 +23,17 @@ public class Delete0 {
     class Solution {
         public String solution(String n_str) {
             String answer = "";
-            if(n_str.charAt(0)!='0') return n_str;
-            n_str.split("0");
-            for (int i = 1; i < n_str.length(); i++) {
-                answer+=n_str;
+            int k=0;
+            for(int i=0;i<n_str.length();i++){
+                k=i;
+                if(n_str.charAt(i)=='0'){
+                    continue;
+                }else if(n_str.charAt(i)!='0'){
+                    break;
+                }
+            }
+            for(int j=k;j<n_str.length();j++){
+                answer+=n_str.charAt(j);
             }
             return answer;
         }
