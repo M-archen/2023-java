@@ -35,15 +35,22 @@ public class ArrayCompare {
     class Solution {
         public int solution(int[] arr1, int[] arr2) {
             int answer = 0;
+            if(arr1.length>arr2.length){
+                return 1;
+            }else if(arr1.length<arr2.length){
+                return -1;
+            }
             if(arr1.length == arr2.length){
-                int a1=arr1.length;
-                int a2= arr2.length;
-                int tmp=a1>=a2?a1:a2;
-
-                for (int i = 0; i < tmp; i++) {
-
+                int a1=0;
+                int a2=0;
+                for (int i = 0; i < arr1.length; i++) {
+                    a1+=arr1[i];
+                    a2+=arr2[i];
                 }
-            }return -1;
+                if(a1==a2) return 0;
+                answer=a1>a2?1:-1;
+
+            }return answer;
         }
     }
 }
