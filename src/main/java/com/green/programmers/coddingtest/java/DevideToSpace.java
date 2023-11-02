@@ -27,11 +27,10 @@ my_string	result
 /*public class DevideToSpace {
     class Solution {// " "" "1칸업. "a"" "추가하고 1칸업. " ""a"
         public String[] solution(String my_string) {
-            String[] answer = {};
-            answer=my_string.split(" ");
-            return answer;
+
         }
     }
 }
 
  */
+

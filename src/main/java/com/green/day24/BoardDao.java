@@ -11,7 +11,8 @@ public class BoardDao {
     public static int insBoard(BoardEntity entity){// entity에는 BoardEntity 객체 주소값 들어있음. (title,ctnts,writer)
         int result=0;
 
-        String sql="INSERT INTO board(title, ctnts, writer)"+ "VALUES"+ "(?,?,?)";
+        String sql="INSERT INTO board(title, ctnts, writer)"+ "VALUES"+ "(?,?,?)";//prepareStatement 덕분에 ?,?,?에 문자열을 넣을 수 있다.
+                                                                                    //ps.set타입이름(물음표순서,넣을값);
 
         String sql2="INSERT INTO board(title, ctnts, writer)"+
                 "VALUES('"+entity.getTitle()+"','" + entity.getCtnts()+"','"+
@@ -24,9 +25,9 @@ public class BoardDao {
         ps=con.prepareStatement(sql);
         ps.setString(1,entity.getTitle());
         ps.setString(2,entity.getCtnts());
-        ps.setString(3,entity.getWriter());
+        ps.setString(3,entity.getWriter());//물음표에 값을 다 넣어줬다.
 
-        result=ps.executeUpdate();
+        result=ps.executeUpdate();//쿼리문 실행.
         }catch(Exception e){
             e.printStackTrace();
         }finally {
