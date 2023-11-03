@@ -1,4 +1,4 @@
-package com.green.day24;
+package com.green.programmers.coddingtest.java;
 
 public class As5Person {
     class Solution {
